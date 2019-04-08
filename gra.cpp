@@ -237,6 +237,10 @@ QString Gra::daneDoTabeliWynikow(string sciezkaPliku,bool sortujCzas)
 
  void Gra::ZapiszGreDoPliku(string nazwaPliku)
 {
+    // Zapisuje w pliku textowym dane w osobnych liniach:
+    // 1:liczbaWierszy, 2:aktualna liczba krokow, 3: aktualny czas
+    // 4: sentencja numerow kierunkow przesuwu pustego pola, ktora doprowadzila
+    // do aktualnego stanu
     QString wynik;
     ofstream plikCzas ;
     plikCzas.open(nazwaPliku,  std::ofstream::trunc);
@@ -259,8 +263,6 @@ QString Gra::daneDoTabeliWynikow(string sciezkaPliku,bool sortujCzas)
     }
     plikCzas <<b;
     plikCzas.close();
-
-
 }
 
 
